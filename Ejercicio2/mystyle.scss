@@ -1,0 +1,38 @@
+@import "mystyleA.scss";
+//@import "mystyleB.scss";
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    & .box{
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 20px 5px 50px;
+    width: 100px;
+    height: 75px;
+    border-radius: $borde;
+    margin-bottom: 1px;
+    }
+    & :nth-child(4){
+     font-family: $principal-font;
+     }
+    & :nth-child(5){
+     font-family: $secondary-font;
+     }
+    & .first{
+    background-color: $principal-color;
+}
+    & .second{
+    background-color: $second-color;
+}
+    & .third{
+    background-color: $three-color;
+}
+    & .shadow{
+        font-weight: bold;  
+        box-shadow: $shadow-left;
+    }
+}
+
+//En el modelo A, no hay bordes redondeados por lo que he creado una variable de "none". Es la forma correcta? o se puede hacer sin crear una variable de bordes par el modelo A?

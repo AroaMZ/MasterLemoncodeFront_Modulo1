@@ -1,0 +1,46 @@
+$color-1: red;
+$color-2: blue;
+$color-3: green;
+$font-principal-color: white;
+$font-secondary-color: grey;
+$colors: $color-1, $color-2, $color-3;
+
+.box {
+  border-radius: 10px;
+  width: auto;
+  padding: 50px;
+  color: $font-secondary-color;
+}
+
+@for $i from 1 to 4 {
+  $i: 1;
+  @for $c from 1 through length($colors) {
+    .container-#{$i} {
+      display: flex;
+      gap: 5px;
+      margin: 5px;
+      $a: 1;
+      $b: 10;
+      & .base-color {
+            background-color: nth($colors, $c);
+            color: $font-principal-color;
+      }
+      @while $a <= 4 {
+        .darken-#{$a} {
+          background-color: darken(nth($colors, $c), $b);
+          color: $font-secondary-color;
+          text-align: center;
+        }
+        .lighten-#{$a} {
+          background-color: lighten(nth($colors, $c), $b);
+          color: $font-secondary-color;
+          text-align: center;
+        }
+        $a: $a + 1;
+        $b: $b + 10;
+      }
+    }
+    $i: $i + 1;
+  }
+ 
+}

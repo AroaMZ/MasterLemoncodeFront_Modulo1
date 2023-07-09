@@ -1,0 +1,38 @@
+
+header > p{
+    font-weight: bold;
+    font-size: 30px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(19, 109, 105);
+    color: white;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+    padding: 25px;
+}
+nav ul li:hover{
+    background-color: rgb(12, 76, 73);
+}
+
+@media screen and (max-width: 640px) {
+    nav ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+    }
+    body{
+        border: 15px solid black;
+        height: 100vh;
+        padding: 25px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,36 @@
+.grid-container {
+  width: 500px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 0.3fr;
+  grid-template-columns: auto;
+  overflow: hidden;
+  border: 25px solid rgb(193, 187, 187);
+}
+.image img {
+  width: 500px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px;
+}
+main .text {
+  line-height: 40px;
+}
+main .date {
+  font-size: 20px;
+  text-align: end;
+  font-weight: bold;
+}
+main span {
+  color: green;
+  font-weight: normal;
+}
+button {
+  background-color: green;
+  color: white;
+  font-size: 25px;
+  margin: 20px;
+}
